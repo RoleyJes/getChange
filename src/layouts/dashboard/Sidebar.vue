@@ -1,23 +1,3 @@
-<template>
-  <nav class="flex flex-col items-center gap-20 bg-white pt-[4.1825rem] pb-6">
-    <RouterLink
-      v-for="route in routes"
-      :key="route.path"
-      :to="route.path"
-      :class="[
-        'w-full border-l-5 py-4',
-        isActiveRoute(route.path) ? 'border-l-green' : 'border-l-transparent',
-      ]"
-    >
-      <component
-        :is="route.component"
-        :to="route.path"
-        :class="[isActiveRoute(route.path) ? 'text-green' : 'text-primary', 'ms-4']"
-      ></component>
-    </RouterLink>
-  </nav>
-</template>
-
 <script>
 import CardsIcon from '@/components/dashboard/CardsIcon.vue'
 import HomeIcon from '@/components/dashboard/HomeIcon.vue'
@@ -41,9 +21,29 @@ export default {
       return routePath === this.$route.path
     },
   },
-
+  
   components: { HomeIcon, UsersIcon, CardsIcon },
 }
 </script>
+
+<template>
+  <nav class="flex flex-col items-center gap-20 bg-white pt-[4.1825rem] pb-6">
+    <RouterLink
+      v-for="route in routes"
+      :key="route.path"
+      :to="route.path"
+      :class="[
+        'flex w-full justify-center border-l-5 py-4',
+        isActiveRoute(route.path) ? 'border-l-green' : 'border-l-transparent',
+      ]"
+    >
+      <component
+        :is="route.component"
+        :to="route.path"
+        :class="[isActiveRoute(route.path) ? 'text-green' : 'text-primary', 'ms4']"
+      ></component>
+    </RouterLink>
+  </nav>
+</template>
 
 <style lang="scss" scoped></style>

@@ -4,6 +4,7 @@
   --color-primary: hsla(203, 98%, 19%, 1);
   --color-gray: hsl(203, 13%, 48%);
   --color-green: hsla(134, 70%, 51%, 1);
+  --color-green-light: hsla(158, 34%, 86%, 1);
   --color-green-darker: hsl(134, 83%, 39%);
   --color-modal-backdrop: hsla(178, 13%, 97%, 1);
 
@@ -12,8 +13,14 @@
 
   --radius-3: 3px;
   --radius-5: 5px;
-}
 
-lk {
-  color: hsl(134, 83%, 39%);
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  @keyframes fade-in {
+    0% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
