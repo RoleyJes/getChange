@@ -64,7 +64,7 @@ export default {
 <template>
   <section class="grid min-h-screen grid-cols-5">
     <!-- Image -->
-    <div class="sticky top-0 col-span-2 h-screen overflow-hidden">
+    <div class="sticky top-0 col-span-2 h-screen overflow-hidden bg-black/50">
       <template v-for="(item, index) in carousel" :key="item.id">
         <ImageCarousel
           class="animate-fade-in"
