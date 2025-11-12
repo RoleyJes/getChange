@@ -1,10 +1,10 @@
 <template>
-  <div>user</div>
+  <main class="pt-20 pb-10"></main>
 </template>
 
 <script>
 export default {
-  name: 'User',
+  name: 'DashboardCards',
 }
 </script>
 

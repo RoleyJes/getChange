@@ -1,13 +1,13 @@
 import SignUp from '@/pages/auth/SignUp.vue'
 import ForgotPassword from '@/pages/auth/ForgotPassword.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import Login from '@/pages/auth/LogIn.vue'
-import Complete from '@/pages/auth/Complete.vue'
-import User from '@/pages/dashboard/User.vue'
-import Cards from '@/pages/dashboard/Cards.vue'
+import LogIn from '@/pages/auth/LogIn.vue'
 import AuthLayout from '@/layouts/AuthLayout.vue'
 import DashboardLayout from '@/layouts/dashboard/DashboardLayout.vue'
 import DashboardHome from '@/pages/dashboard/DashboardHome.vue'
+import DashboardCards from '@/pages/dashboard/DashboardCards.vue'
+import AuthComplete from '@/pages/auth/AuthComplete.vue'
+import DashboardEmployee from '@/pages/dashboard/DashboardEmployee.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,7 +22,7 @@ const router = createRouter({
         {
           path: 'login',
           name: 'login',
-          component: Login,
+          component: LogIn,
         },
         {
           path: 'signup',
@@ -34,7 +34,7 @@ const router = createRouter({
         },
         {
           path: 'complete',
-          component: Complete,
+          component: AuthComplete,
         },
       ],
     },
@@ -44,7 +44,6 @@ const router = createRouter({
       component: DashboardLayout,
       name: 'dashboard',
       meta: { requiresAuth: true },
-
       children: [
         {
           path: '',
@@ -53,11 +52,11 @@ const router = createRouter({
         },
         {
           path: 'user',
-          component: User,
+          component: DashboardEmployee,
         },
         {
           path: 'cards',
-          component: Cards,
+          component: DashboardCards,
         },
       ],
     },

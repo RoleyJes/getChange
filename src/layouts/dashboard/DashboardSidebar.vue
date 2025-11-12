@@ -4,7 +4,7 @@ import HomeIcon from '@/components/dashboard/HomeIcon.vue'
 import UsersIcon from '@/components/dashboard/UsersIcon.vue'
 
 export default {
-  name: 'Sidebar',
+  name: 'DashboardSidebar',
 
   data() {
     return {
@@ -21,7 +21,7 @@ export default {
       return routePath === this.$route.path
     },
   },
-  
+
   components: { HomeIcon, UsersIcon, CardsIcon },
 }
 </script>

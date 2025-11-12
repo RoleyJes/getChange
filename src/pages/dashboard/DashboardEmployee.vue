@@ -1,10 +1,10 @@
 <template>
-  <div>Cards</div>
+  <main class="px-18 py-23"></main>
 </template>
 
 <script>
 export default {
-  name: 'Cards',
+  name: 'DashboardEmployee',
 }
 </script>
 

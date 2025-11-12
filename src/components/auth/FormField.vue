@@ -1,16 +1,17 @@
 <template>
-  <div class="flex gap-3 w-full flex-col">
-    <label :for="label" class="text-gray">{{ label }}</label>
+  <div class="flex w-full flex-col gap-3">
+    <label v-if="label" :for="label" class="text-gray">{{ label }}</label>
     <div class="relative">
       <input
         :id="label"
         :type="currentType"
-        class="text-xl focus:outline-none border-b border-b-[#e6e7eb] w-full pb-2 pe-6"
+        :placeholder="placeholder"
+        class="placeholder:text-gray w-full border-b border-b-[#e6e7eb] pe-6 pb-2 text-xl placeholder:text-base placeholder:font-normal focus:outline-none"
       />
       <img
         v-if="icon"
         :src="icon"
-        :class="['absolute bottom-3 right-0', clickableIcon ? 'cursor-pointer' : '']"
+        :class="['absolute right-0 bottom-3', clickableIcon ? 'cursor-pointer' : '']"
         alt="icon"
         @click="toggleVisibility"
       />
@@ -31,11 +32,15 @@ export default {
   props: {
     label: {
       type: String,
-      required: true,
+      required: false,
     },
     inputType: {
       type: String,
       required: true,
+    },
+    placeholder: {
+      type: String,
+      required: false,
     },
     icon: {
       type: String,

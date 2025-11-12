@@ -25,11 +25,11 @@ export default defineConfig([
   skipFormatting,
 
   // 👇 Add this block at the end
-  {
-    rules: {
-      'vue/no-unused-components': 'warn', // Change from error → warning
-      'vue/multi-word-component-names': 'off',
-      'vue/no-unused-vars': 'warn',
-    },
-  },
+  // {
+  // rules: {
+  //   'vue/no-unused-components': 'warn', // Change from error → warning
+  //   'vue/multi-word-component-names': 'off',
+  //   'vue/no-unused-vars': 'warn',
+  // },
+  // },
 ])

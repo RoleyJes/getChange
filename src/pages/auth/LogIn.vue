@@ -6,15 +6,15 @@
     link="/auth/signup"
   >
     <form @submit.prevent="">
-      <div class="space-y-11 mb-14">
+      <div class="mb-14 space-y-11">
         <FormField label="Email" inputType="email" :icon="atIcon" />
         <FormField label="Password" inputType="password" :icon="eye" clickableIcon />
       </div>
 
-      <div class="flex justify-between items-center">
+      <div class="flex items-center justify-between">
         <RouterLink
           to="/auth/forgotPassword"
-          class="text-green font-medium text-sm hover:scale-105 transition-transform duration-300"
+          class="text-green text-sm font-medium transition-transform duration-300 hover:scale-105"
           >Forgot password?</RouterLink
         >
         <CustomButton buttonText="Sign in" @click.prevent="handleLogin" />
@@ -44,7 +44,6 @@ export default {
   methods: {
     handleLogin() {
       login()
-      console.log('khgkg')
       this.$router.push({ name: 'home' })
     },
   },

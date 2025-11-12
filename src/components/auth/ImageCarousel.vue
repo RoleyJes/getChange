@@ -43,6 +43,8 @@ export default {
       <div class="mt-auto mb-18">
         <p class="font-semibold">{{ title }}</p>
         <p>{{ description }}</p>
+
+        <!-- Dots -->
         <div class="mt-8 flex items-center justify-center gap-3">
           <span
             @click="$emit('dotClick', i)"

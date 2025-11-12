@@ -1,9 +1,11 @@
 <template>
-  <div
-    v-if="showModal"
-    class="fixed inset-0 z-50 flex w-full items-center justify-center bg-black/50"
-  >
-    <div class="rounded-5 h-60 w-full max-w-164 bg-white pt-4">
+  <div class="fixed inset-0 z-50 flex w-full items-center justify-center bg-black/50">
+    <div
+      :class="[
+        'rounded-5 flex max-h-141.5 w-full max-w-164 flex-col overflow-y-auto bg-white pt-4',
+        modalClassHeight,
+      ]"
+    >
       <!-- Cancel button -->
       <div class="flex justify-end pe-5">
         <button
@@ -22,10 +24,10 @@
 <script>
 export default {
   props: {
-    showModal: {
-      type: Boolean,
-      default: false,
-      required: true,
+    modalClassHeight: {
+      type: String,
+      required: false,
+      default: 'h-full',
     },
   },
 }

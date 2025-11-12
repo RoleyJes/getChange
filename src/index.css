@@ -6,10 +6,12 @@
   --color-green: hsla(134, 70%, 51%, 1);
   --color-green-light: hsla(158, 34%, 86%, 1);
   --color-green-darker: hsl(134, 83%, 39%);
+  --color-red: hsla(353, 100%, 49%, 1);
   --color-modal-backdrop: hsla(178, 13%, 97%, 1);
 
   --shadow-form-shadow: 0px 20px 50px 0px hsla(108, 13%, 92%, 1);
   --shadow-dropdown: 0px 4px 9px 0px hsla(0, 0%, 0%, 0.06);
+  --shadow-green: 0px 15px 30px 0px hsla(134, 70%, 51%, 0.3);
 
   --radius-3: 3px;
   --radius-5: 5px;

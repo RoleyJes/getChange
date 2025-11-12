@@ -1,7 +1,7 @@
 <template>
   <div class="grid h-screen grid-cols-[80px_1fr] grid-rows-[72px_1fr]">
     <CustomHeader class="sticky top-0 z-50 col-span-2" />
-    <Sidebar class="overflow-y-auto" />
+    <DashboardSidebar class="overflow-y-auto" />
     <main class="bg-gray/10 overflow-y-auto ps-18 [overflow-anchor:none]">
       <RouterView />
     </main>
@@ -10,14 +10,14 @@
 
 <script>
 import CustomHeader from './CustomHeader.vue'
-import Sidebar from './Sidebar.vue'
+import DashboardSidebar from './DashboardSidebar.vue'
 
 export default {
   name: 'DashboardLayout',
 
   components: {
     CustomHeader,
-    Sidebar,
+    DashboardSidebar,
   },
 }
 </script>

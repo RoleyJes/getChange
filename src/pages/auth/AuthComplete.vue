@@ -1,8 +1,8 @@
 <template>
   <AuthRightGridUI>
-    <div class="text-center flex flex-col items-center justify-center gap-6 mx-auto max-w-md">
+    <div class="mx-auto flex max-w-md flex-col items-center justify-center gap-6 text-center">
       <p class="text-semibold text-4xl">Great to have you onboard</p>
-      <p class="text-lg text-gray mb-4">
+      <p class="text-gray mb-4 text-lg">
         We just mailed you a confirmation link to josh.bakery@gmail.com. Complete registration by
         following the link.
       </p>
@@ -16,7 +16,7 @@ import AuthRightGridUI from '@/components/auth/AuthRightGridUI.vue'
 import CustomButton from '@/components/CustomButton.vue'
 
 export default {
-  name: 'Complete',
+  name: 'AuthComplete',
 
   components: { AuthRightGridUI, CustomButton },
 }
